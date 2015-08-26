@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "Now To Meow",
+	"version": "1.0",
+	"description": "Replaces body text 'now' with 'meow'.",
+	"content_scripts": 
+	[
+		{
+			"matches": ["*://*/*"],
+			"js": ["content_script.js"],
+			"run_at": "document_end"
+		}
+	]
+}
