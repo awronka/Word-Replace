@@ -1,13 +1,17 @@
 {
 	"manifest_version": 2,
-	"name": "Now To Meow",
+	"name": "Word Replace",
 	"version": "1.0",
-	"description": "Replaces body text 'now' with 'meow'.",
+	"description": "Replaces words on the dom",
+	"options_page": "options.html",
+    "permissions": [
+      "storage"
+    ],
 	"content_scripts": 
 	[
 		{
 			"matches": ["*://*/*"],
-			"js": ["content_script.js"],
+			"js": ["content_script.js","save_script.js"],
 			"run_at": "document_end"
 		}
 	]

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Replacer</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+</head>
+<body>
+ <nav class="nav navbar">
+   <h1 class='text-center'>Word Replacer</h1>
+  </nav>
+<div class="col-xs-4"></div>
+<div class="col-xs-4">
+<form class="form">
+  <div class="form-group">
+    <label for="word">Word</label>
+    <input type="text" class="form-control" id="word" placeholder="word">
+  </div>
+  <div class="form-group">
+    <label for="replace">Replacement</label>
+    <input type="text" class="form-control" id="replace" placeholder="replacement">
+  </div>
+  <button id="save" type="submit" class="btn btn-default">Save</button>
+</form>
+</div>
+<div class="col-xs-4"></div>
+<div id="status"></div>
+<script src="save_script.js"></script>
+<scropt src="content_script"></script>
+</body>
+</html>

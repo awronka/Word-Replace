@@ -2,8 +2,6 @@ walk(document.body);
 
 function walk(node) 
 {
-	// I stole this function from here:
-	// http://is.gd/mwZp7E
 	
 	var child, next;
 
@@ -29,10 +27,22 @@ function walk(node)
 
 function handleText(textNode) 
 {
-	var v = textNode.nodeValue;
-
-	v = v.replace(/\bNow\b/g, "Meow");
-	v = v.replace(/\bnow\b/g, "meow");
+	chrome.storage.sync.get({
+    word: "",
+    replace: ""
+  }, function(items) {
+	  // console.log("these are",items)
+   var v = textNode.nodeValue;
+	var re =new RegExp('\\b'+items.word+'\\b','g')
+	console.log(re)
+	 v = v.replace(re, items.replace);
+	 v = v.replace(/\bbreak\b/g, "Meow");
+	//  v = v.replace(re, "ouch");
+	
 	
 	textNode.nodeValue = v;
+  });
+	
+	
+	
 }
