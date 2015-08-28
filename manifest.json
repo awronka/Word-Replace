@@ -3,7 +3,7 @@
 	"name": "Word Replace",
 	"version": "1.0",
 	"description": "Replaces words on the dom",
-	"options_page": "options.html",
+	"options_page": "options/index.html",
     "permissions": [
       "storage"
     ],
@@ -11,7 +11,7 @@
 	[
 		{
 			"matches": ["*://*/*"],
-			"js": ["content_script.js","save_script.js"],
+			"js": ["actions/content_script.js","server/save_script.js"],
 			"run_at": "document_end"
 		}
 	]
