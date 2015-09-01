@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<base href="/"/>-->
+
   <title>Word Replacer</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" href="../css/main.css">
+  <script src="../server/angular.min.js"></script>
+  <script src="../server/angular-ui-router.min.js"></script>
+  <script src="main.app.js"></script>
+  <script src="states.js"></script>
+  <script src="wordhandler.controller.js"></script>
+  <script src="data.factory.js"></script>
+  <script src="chart.directive.js"></script>
+  <script src="../server/jquery.min.js"></script>
+  <script src="../server/charts.min.js"></script>
+  <script src="chart.controller.js"></script>
+  <script src="instructions.directive.js"></script>
 </head>
 <body ng-app="WordReplaceApp">
- 
-    <div id="top">
-        <navbar></navbar>
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header text-center">
+        <h1 class="title-parent"><i class="fa fa-child"></i> PARENT FIX<small> a web control product</small></h1>
     </div>
-<div class="col-xs-4"></div>
-<div class="col-xs-4">
+  </div>
+</nav>
+<!--<ui-view><ui-view>-->
+<div class="col-sm-4 lightgrey"><instr></instr></div>
+<div class="col-sm-4">
 <form class="form">
-  <div class="form-group">
-    <label for="word">Word</label>
-    <input type="text" class="form-control" id="word" placeholder="word">
-  </div>
-  <div class="form-group">
-    <label for="replace">Replacement</label>
-    <input type="text" class="form-control" id="replace" placeholder="replacement">
-  </div>
-  <button id="save" type="submit" class="btn btn-default">Save</button>
- <a class="btn btn-danger" id="delete" href="#">
-  <i class="fa fa-trash-o fa-lg"></i> Delete</a>
+        <div class="form-group">
+          <label for="word">Word<span class="error" id="word-error"></span></label>
+          <input type="text" class="form-control" id="word" placeholder="word" required>
+        </div>
+        <div class="form-group">
+          <label for="replace">Replacement<span class="error" id="replace-error"></span></label>
+          <input type="text" class="form-control" id="replace" placeholder="replacement" required>
+        </div>
+        <div  class="text-center">
+        <a class="btn btn-primary" id="save">
+        <i class="fa fa-save fa-lg"></i> Save</a>
+        <a class="btn btn-danger" id="delete">
+        <i class="fa fa-trash-o fa-lg"></i> Delete</a></div>
+        <!--<a class="btn btn-success" id="get words" ng-click="getWords()">
+        <i class="fa fa-pig fa-lg"></i>Get Test</a>
+        <a class="btn btn-warning" id="get words" ng-click="getWebInfo()">
+        <i class="fa fa-time fa-lg"></i>Get Test</a>-->
 </form>
-</div>
-<div class="col-xs-4">
-  <h1 class='text-center'>Replaced Words</h1>
+  <h2><i class="fa fa-sign-out fa-lg"></i>Replaced Words</h2>
   <div class="col-xs-6 "><h3>word</h3>
   <ul id="word-list"></ul>
   </div>
@@ -37,8 +60,9 @@
   <ul id="replace-list"></ul>
   </div>
 </div>
-<div id="status"></div>
-<script src="server/save_script.js"></script>
-<scropt src="action/content_script"></script>
+<chart></chart>
+<script src="../server/save_script.js"></script>
+  <!--<script src="../actions/chart.js"></script>-->
+<!--<script src="../actions/content_script.js"></script>-->
 </body>
 </html>

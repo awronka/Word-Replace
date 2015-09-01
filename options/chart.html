@@ -1,0 +1,18 @@
+<div class="col-sm-4">
+  <h4>Frequency<small> of replaced words</small></h4>
+ <canvas id="buyers" width="400" height="400"></canvas>
+ <!--<canvas id="buyers" width="400" height="400"></canvas>-->
+ <!--<select class="form-control web-list">
+<option ng-repeat="address in web" ng-model="selectedData"  value="{{address.webAddress}}">{{address.webAddress}}</option>
+ </select>-->
+ <label for="webSelect"> Multiple select: </label><br>
+     <select class="form-control web-list" name="webSelect" id="webSelect" ng-model="new.webSelect">
+      <option ng-repeat="address in web"  value="{{address.webAddress}}">{{address.webAddress}}</option>
+ </select><br>
+ <a class="btn btn-success" ng-click="getAllData()">
+ <i class="fa fa-bar-chart fa-lg"></i>Single Page</a>
+  <a class="btn btn-warning" ng-click="deleteWebData()">
+ <i class="fa fa-trash fa-lg"></i>Delete Web Data</a>
+</div>
+<div id="status">
+</div>

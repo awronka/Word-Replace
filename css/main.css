@@ -1,0 +1,113 @@
+.navbar{
+	background-color: lightgray;
+	margin: 1%;
+	font-family: Montserrat;
+	text-align: right;
+}
+.nav-ul{
+	list-style: none;
+	
+}
+
+.nav-ul li{
+	text-decoration: none;
+	display: inline-block;
+
+	
+}
+.lightgrey{
+	background-color: lightgray;
+}
+
+.navbar-header{
+	text-align: right;
+}
+
+.title-parent{
+	text-shadow: 2px 2px lightblue;
+	color: white;
+	float: left;
+}
+@media (min-width:1080px) {
+	.col-sm-4{
+	width: 31%;
+}
+
+.lightgrey{
+	background-color: lightgray;
+	/*height: 100vh;*/
+	margin: 1%;
+}
+	
+} 
+
+@media (max-width:450px) {
+.lightgrey div h2{
+	font-size: 12px;
+}	
+.lightgrey div p{
+	font-size: 8px;
+}	
+} 
+
+
+.col-xs-6 ul{
+	list-style: none;
+	padding: 0;
+    list-style-type: none;
+	
+}
+
+.col-xs-6 ul li{
+	border-bottom: thin solid darkgray;
+}
+/*.chart{
+	border: thick solid black;
+}*/
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 4px;
+  margin: 2px;
+  color: white;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.web-list{
+	width: 400px;
+}
+
+.inst{
+	padding: 2%;
+}
+
+.error{
+	color:red;
+}
+
+/*.btn-primary{
+	background-color: lightblue;
+}*/

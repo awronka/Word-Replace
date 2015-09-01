@@ -5,13 +5,14 @@
 	"description": "Replaces words on the dom",
 	"options_page": "options/index.html",
     "permissions": [
-      "storage"
+      "storage",
+	  "contextMenus"
     ],
 	"content_scripts": 
 	[
 		{
 			"matches": ["*://*/*"],
-			"js": ["actions/content_script.js","server/save_script.js"],
+			"js": ["actions/content_script.js","server/jquery.min.js","server/save_script.js", "actions/href-recorder.js"],
 			"run_at": "document_end"
 		}
 	]
